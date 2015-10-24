@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+    Kittens!
+    </title>
+  </head>
+<body>
+  <%=3+3%>
+    <h1 style="color: #FE4365; text-align:center">
+    Vote for those bloody bunny-kittens!
+    </h1>
+      <h2 style="color: #59B768; text-align:center">
+      Vote or get punished!
+      </h2>
+      <p style="color: #FC9D9A; text-align:center">
+     Bunnies are funny, fuzzy and fluffy!
+        <img src="http://2nerd.com/wp-content/uploads/2012/07/Angry-Easter-Bunny.jpg", alt=bunny>
+      </p>
+  <p>Or maybe you don't like bunnies? Do you like kittens better?</p>
+  <body class='container'>
+    <p>How do you like them?</p>
+
+   <form action='cast' method='post'>
+      <ul class='unstyled'>
+        <% CHOICES.each do |place_id, place_name| %>
+          <li>
+            <label class='radio'>
+              <input type='radio' name='vote' value='<%= place_id %>' id='vote_<%= place_id %>' />
+              <%= place_name %>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+      <button type='submit' class='btn btn-primary'>Vote!</button>
+    </form>
+</body>
+</html>
